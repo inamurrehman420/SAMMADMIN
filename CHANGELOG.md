@@ -83,8 +83,8 @@ typescript                                 3.1.6   →          3.4.5
 ### Bug fixing
 - browser console error
 ```
-href="#pablo" -> href="javascript:void(0)"
-href="#"      -> href="javascript:void(0)"
+href="#pablo" ->  
+href="#"      ->  
 ```
 - form-validation error from the `_forms.scss` file
 ```
