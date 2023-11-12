@@ -10,14 +10,23 @@ const routes: Routes =[
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, {
+  },
+  {
     path: '',
     component: AdminLayoutComponent,
     children: [{
       path: '',
       loadChildren: () => import('./layouts/admin-layout/admin-layout.module').then(m => m.AdminLayoutModule)
     }]
-  }
+  },
+  {
+    path: "user-list",
+    component: AdminLayoutComponent,
+    loadChildren: () =>
+      import("./modules/teamManagment/teamManagment.module").then(
+        (m) => m.TeamManagmentModule
+      ),
+  },
 ];
 
 @NgModule({
