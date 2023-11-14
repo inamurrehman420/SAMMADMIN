@@ -7,27 +7,27 @@ import { DataService } from 'app/shared/http/data.service';
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private _dataService: DataService) { }
 
 
   login(formData: any) {
-    return ""
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/authenticate', formData)
   }
 
   Register(formData: any) {
-    return ""
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/register-user', formData)
   }
 
   ChangePassword(formData: any) {
-    return ""
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/authenticate', formData)
   }
   ResetLink(formData: any) {
-    return ""
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/reset-link', formData)
   }
   ResetPassword(formData: any) {
-    return ""
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/reset-password', formData)
   }
   LoginWithGoogle(){
-    return ""
+    return this._dataService.genericServiceCaller(REQUESTTYPE.GET, 'auth/google')
   }
 }
