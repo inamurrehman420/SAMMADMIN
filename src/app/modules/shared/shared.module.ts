@@ -16,6 +16,7 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { RouterModule } from "@angular/router";
 import { AlphaNumSpecialDirective } from "app/directives/alpha-num-special.directive";
 import { AlphaNumericFieldDirective } from "app/directives/alpha-numeric-field.directive";
 import { AlphabetOnlyDirective } from "app/directives/alphabet-only.directive";
@@ -57,6 +58,8 @@ import { ToastrModule } from "ngx-toastr";
         MatFormFieldModule,
         MatInputModule,
         FormsModule,
+        RouterModule,
+        NgxSpinnerModule
         
         // AgmCoreModule.forRoot({
         //     apiKey: 'AIzaSyC3SrcUt_3iPERnX-hk46YYsKJiCTzJ5z0',
@@ -91,6 +94,9 @@ import { ToastrModule } from "ngx-toastr";
         CapsOnlyDirective,
         AlphaNumSpecialDirective,
         NumberAndDecimalDirective,
+
+        RouterModule,
+        NgxSpinnerModule,
         
     ],
     entryComponents: [

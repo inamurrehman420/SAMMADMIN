@@ -1,0 +1,460 @@
+.login-page {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: #373737;
+  padding: 15px;
+}
+.login-page .fxt-checkbox-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.login-page .fxt-bg-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.login-page .fxt-content {
+  padding: 45px 40px 45px 40px;
+  width: 100%;
+  background-color: #fff;
+}
+@media only screen and (max-width: 767px) {
+  .login-page .fxt-content {
+    padding: 65px 30px 45px;
+  }
+}
+.login-page .fxt-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.login-page .fxt-header .fxt-logo {
+  display: block;
+  margin-bottom: 7px;
+  max-width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-page .fxt-header h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.login-page .fxt-header p {
+  color: #999898;
+}
+.login-page .fxt-form h2 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.login-page .fxt-form .fxt-otp-logo {
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+}
+.login-page .fxt-form .fxt-otp-label {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+}
+.login-page .fxt-form p {
+  font-size: 18px;
+  color: #111111;
+  text-align: center;
+}
+.login-page .fxt-form p span {
+  display: block;
+}
+.login-page .fxt-form .form-group {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+.login-page .fxt-form .form-group .field-icon {
+  position: absolute;
+  z-index: 1;
+  right: 19px;
+  bottom: 18px;
+  font-size: 14px;
+  color: #a1a1a1;
+}
+
+.google-signin-button {
+  position: relative;
+  background-color: #fff; /* Set your desired background color */
+  border: 1px solid #ccc; /* Set your desired border color */
+  color: #333; /* Set your desired text color */
+}
+
+.google-icon {
+  position: absolute;
+  left: -34px; /* Adjust the left position according to your design */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Set the width of the Google icon */
+  height: 20px; /* Set the height of the Google icon */
+  margin-right: 10px; /* Adjust the margin to create space between icon and text */
+}
+
+.login-page .fxt-form .form-group .field-icon:before {
+  padding: 17px 10px;
+}
+.login-page .fxt-form .form-control {
+  min-height: 50px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #e7e7e7;
+  padding: 10px 15px;
+  color: #111;
+}
+.login-page .fxt-form input::-webkit-input-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.login-page .fxt-form input::-moz-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.login-page .fxt-form input:-moz-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.login-page .fxt-form input:-ms-input-placeholder {
+  color: #a1a1a1;
+  font-size: 15px;
+  font-weight: 300;
+}
+.login-page .fxt-form .fxt-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+.login-page .fxt-form .fxt-form-row .fxt-form-col {
+  padding: 10px 5px;
+  text-align: center;
+  margin-right: 10px;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.login-page .fxt-form .fxt-form-row .fxt-form-col:last-child {
+  margin-right: 0;
+}
+.login-page .fxt-form .fxt-form-btn {
+  margin-bottom: 10px;
+}
+.login-page .fxt-btn-fill {
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+  border: 0;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #111;
+  padding: 10px 36px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.login-page .fxt-btn-fill:hover {
+  background-color: #333;
+  border-color: #333;
+}
+.login-page .fxt-btn-fill:focus {
+  outline: none;
+}
+.login-page .switcher-text {
+  color: #63bbff;
+  font-size: 15px;
+  margin-bottom: 5px;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.login-page .switcher-text:hover {
+  color: #000000;
+}
+.login-page .switcher-text2 {
+  color: #63bbff;
+  font-size: 15px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.login-page .switcher-text2.inline-text {
+  margin-left: 3px;
+}
+.login-page .switcher-text2:hover {
+  color: #000000;
+}
+.login-page .fxt-style-line {
+  overflow: hidden;
+  text-align: center;
+}
+.login-page .fxt-style-line h3 {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #a4a4a4;
+  display: inline-block;
+  position: relative;
+  padding: 0 25px;
+  z-index: 1;
+}
+.login-page .fxt-style-line h3:before {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #ebebeb;
+  left: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 1;
+}
+.login-page .fxt-style-line h3:after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #ebebeb;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 1;
+}
+.login-page ul.fxt-socials {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: -5px;
+  margin-left: -5px;
+  margin-bottom: 20px;
+}
+.login-page ul.fxt-socials li {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 575px) {
+  .login-page ul.fxt-socials li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .login-page ul.fxt-socials li {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+}
+.login-page ul.fxt-socials li a {
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  font-size: 14px;
+  height: 45px;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.login-page ul.fxt-socials li a i {
+  border-radius: 2px 0 0 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+}
+.login-page ul.fxt-socials li a span {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.login-page ul.fxt-socials li.fxt-facebook a {
+  background-color: #3b5998;
+}
+.login-page ul.fxt-socials li.fxt-facebook a i {
+  background-color: #4867aa;
+}
+.login-page ul.fxt-socials li.fxt-facebook a:hover {
+  background-color: #5676bb;
+}
+.login-page ul.fxt-socials li.fxt-twitter a {
+  background-color: #00acee;
+}
+.login-page ul.fxt-socials li.fxt-twitter a i {
+  background-color: #33ccff;
+}
+.login-page ul.fxt-socials li.fxt-twitter a:hover {
+  background-color: #3dc5f3;
+}
+.login-page ul.fxt-socials li.fxt-google a {
+  background-color: #CC3333;
+}
+.login-page ul.fxt-socials li.fxt-google a i {
+  background-color: #db4437;
+}
+.login-page ul.fxt-socials li.fxt-google a:hover {
+  background-color: #e75042;
+}
+.login-page .checkbox {
+  padding-left: 5px;
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+.login-page .checkbox label {
+  padding-left: 20px;
+  color: #a4a4a4;
+  margin-bottom: 0;
+  font-size: 15px;
+  position: relative;
+}
+.login-page .checkbox label:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 4px;
+  left: 0;
+  margin-left: -5px;
+  border: 1px solid;
+  border-color: #dcdcdc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.login-page .checkbox label:after {
+  position: absolute;
+  margin-left: -20px;
+  padding-left: 3px;
+  font-size: 10px;
+  color: #555555;
+}
+.login-page .checkbox input[type="checkbox"] {
+  display: none;
+}
+.login-page .checkbox input[type="checkbox"]:checked + label::after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f00c";
+  font-weight: 900;
+  color: #ffffff;
+  left: 15px;
+  top: 4px;
+}
+.login-page .checkbox input[type="checkbox"]:checked + label::before {
+  background-color: #111;
+  border-color: #111;
+}
+.login-page .fxt-footer {
+  text-align: center;
+}
+.login-page .fxt-footer p {
+  color: #999898;
+}
+.login-page .fxt-footer .fxt-resend-wrap {
+  margin-bottom: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 18px;
+  width: 100%;
+}
+.login-page .fxt-footer .fxt-btn-resend {
+  margin-left: 3px;
+  box-shadow: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: #63bbff;
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+.login-page .fxt-footer .fxt-btn-resend:focus {
+  outline: none;
+}
+.login-page .fxt-footer .fxt-btn-resend:hover {
+  color: #000000;
+}
+.login-page .fxt-footer .text-or {
+  margin-left: 3px;
+  color: #000000;
+}
+
