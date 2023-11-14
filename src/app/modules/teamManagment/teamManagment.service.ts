@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
+import { DataService } from 'app/http/data.service';
 import { REQUESTTYPE } from 'app/models/enum/request-type.enum';
-import { DataService } from 'app/shared/http/data.service';
 @Injectable({
   providedIn: 'root'
 })

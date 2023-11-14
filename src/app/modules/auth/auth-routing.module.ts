@@ -1,22 +1,36 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
-import { AuthService } from "./auth.service";
+import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
+import { ResetPasswordComponent } from "./reset-password/reset-password.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: LoginComponent,
+    redirectTo:'sign-in',
+    pathMatch:'full'
   },
-  // {
-  //   path: "sign-in",
-  //   component: LoginComponent,
-  // },
+  {
+    path:'',
+    children:[
+      {
+        path: "sign-in",
+        component: LoginComponent,
+      },
+      {
+        path:'forgot-password',
+        component:ForgotPasswordComponent
+      },
+      {
+        path:'reset-password',
+        component:ResetPasswordComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
-  providers: [AuthService],
+  exports: [RouterModule]
 })
 export class AuthRoutingModule {}
