@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { TeamManagmentService } from 'app/modules/teamManagment/teamManagment.service';
 import * as Chartist from 'chartist';
+import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +10,7 @@ import * as Chartist from 'chartist';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private teamManagmentService:TeamManagmentService,) { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -67,7 +69,7 @@ export class DashboardComponent implements OnInit {
   };
   ngOnInit() {
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
-
+      this.GetUser();
       const dataDailySalesChart: any = {
           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
           series: [
@@ -147,4 +149,15 @@ export class DashboardComponent implements OnInit {
       this.startAnimationForBarChart(websiteViewsChart);
   }
 
+  GetUser(){
+    // this.spinner.show();
+    this.teamManagmentService.GetUser({page:1,limit:1})
+    .pipe(
+        finalize(() => {
+          // this.spinner.hide();
+        })
+    )
+    .subscribe((res) => {
+    });
+  }
 }
