@@ -1,25 +1,31 @@
-<section class="fxt-template-animation login-page loaded rounded">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-xl-3 col-lg-3 col-sm-12 col-12 fxt-bg-color">
-                <div class="fxt-content rounded shadow">
-                    <div class="fxt-header">
-                        <div class="logo d-flex justify-content-center">
-<!--                            <img style="width: 140px;" src="assets/logo.svg"/>-->
-<!--                            <p class="fw-bold text-2xl mb-0 text-center ms-4 align-self-center title lg text-primary">HEALTH CARE</p>-->
-                            <div class="logo d-grid justify-items-center">
-                                <!--            <img src="assets/logo.svg"/>-->
-                                <!--          <span class="fw-bold ms-4 align-self-center title lg text-white">HEALTHCARE</span>-->
-                                <h1 class="mb-0 text-primary mb-2" style=" font-size: 36px; font-weight: bold;">
-                                    SAMM
-                                </h1>
-                                <p>
-                                    Smart Automatic Meal Maker
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
+<section class="fxt-template-animation fxt-template-layout31">
+    <span class="fxt-shape fxt-animation-active"></span>
+    <div class="fxt-content-wrap">
+        <div class="fxt-heading-content">
+            <div class="fxt-inner-wrap">
+                <div class="fxt-transformY-50 fxt-transition-delay-3">
+                    <a  class="fxt-logo"><img src="assets/img/logo.png" alt="Logo"></a>
+                </div>
+                <div class="fxt-transformY-50 fxt-transition-delay-4">
+                </div>
+                <div class="fxt-login-option">
+                    <!--          <ul>-->
+                    <!--            <li class="fxt-transformY-50 fxt-transition-delay-6"><a href="#">Sing in with Google</a></li>-->
+                    <!--            <li class="fxt-transformY-50 fxt-transition-delay-7"><a href="#">Sing in with Facebook</a></li>-->
+                    <!--          </ul>-->
+                </div>
+            </div>
+        </div>
+        <div class="fxt-form-content">
+            <div class="fxt-page-switcher">
+                <h2 class="fxt-page-title mr-3">Login</h2>
+                <ul class="fxt-switcher-wrap">
+                    <li><a  class="fxt-switcher-btn active border-0 rounded shadow">Login</a></li>
+                    <li><a  class="fxt-switcher-btn border-0 rounded shadow">Register</a></li>
+                </ul>
+            </div>
+            <div class="fxt-main-form">
+                <div class="fxt-inner-wrap">
                     <div class="fxt-form">
                         <form
                                 class="mt-6"
@@ -27,7 +33,7 @@
 
                             <div class="row">
 
-                                <mat-form-field class="mb-3" >
+                                <mat-form-field class="mb-3 w-100" appearance="outline">
                                     <mat-label>Email</mat-label>
                                     <input
                                             matInput
@@ -37,7 +43,7 @@
                                     <mat-error>Email Required</mat-error>
                                 </mat-form-field>
 
-                                <mat-form-field>
+                                <mat-form-field class="w-100" appearance="outline">
                                     <mat-label>Password</mat-label>
                                     <input
                                             matInput
@@ -49,37 +55,144 @@
                                 </mat-form-field>
 
 
-                <div class="inline-flex items-end justify-between w-full mt-1.5">         
-                   <a
-                       class="text-md font-medium text-primary-500 hover:underline"
-                       [routerLink]="['forgot-password']">forgot password?
-                 </a>
-                    <!-- <a class="text-primary underline fw-bold" [routerLink]="['/register']">
-                        Sign Up
-                    </a> -->
-                </div>
+                                <div class="inline-flex items-end justify-between w-full mt-1.5">
+                                    <a
+                                            class="text-md font-medium text-primary-500 hover:underline"
+                                            [routerLink]="['forgot-password']">forgot password?
+                                    </a>
+                                    <!-- <a class="text-primary underline fw-bold" [routerLink]="['/register']">
+                                        Sign Up
+                                    </a> -->
+                                </div>
 
                             </div>
 
                         </form>
                         <div class="text-right mt-3">
-                            <button class="w-100"  mat-raised-button color="primary" (click)="onSubmit()">
+                            <button class="w-100 btn btn-primary"  (click)="onSubmit()">
                                 Submit
                             </button>
-                    </div>
-                    <!-- <div class="text-right mt-3">
-                        <button class="w-100 google-signin-button text-primary" mat-raised-button  (click)="onGoogleSigninSuccess()">
-                            <img src="assets/google-icon.png" alt="Google Icon" class="google-icon">
-                            Login With Google
-                        </button>
+                        </div>
+                        <div class="text-right mt-3">
+                            <button class="w-100 google-signin-button text-primary" mat-raised-button  (click)="onGoogleSigninSuccess()">
+                                <img src="assets/img/google-icon.png" alt="Google Icon" class="google-icon">
+                                Login With Google
+                            </button>
 
-                </div> -->
+                        </div>
+                    </div>
+
+                    <div class="fxt-switcher-description mt-3">Don't have an account?
+                        <a class="fxt-switcher-text ms-1" >Register</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<section class="fxt-template-animation login-page loaded rounded">-->
+<!--    <div class="container">-->
+<!--        <div class="row align-items-center justify-content-center">-->
+<!--            <div class="col-xl-3 col-lg-3 col-sm-12 col-12 fxt-bg-color">-->
+<!--                <div class="fxt-content rounded shadow">-->
+<!--                    <div class="fxt-header">-->
+<!--                        <div class="logo d-flex justify-content-center">-->
+<!--&lt;!&ndash;                            <img style="width: 140px;" src="assets/logo.svg"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p class="fw-bold text-2xl mb-0 text-center ms-4 align-self-center title lg text-primary">HEALTH CARE</p>&ndash;&gt;-->
+<!--                            <div class="logo d-grid justify-items-center">-->
+<!--                                &lt;!&ndash;            <img src="assets/logo.svg"/>&ndash;&gt;-->
+<!--                                &lt;!&ndash;          <span class="fw-bold ms-4 align-self-center title lg text-white">HEALTHCARE</span>&ndash;&gt;-->
+<!--                                <h1 class="mb-0 text-primary mb-2" style=" font-size: 36px; font-weight: bold;">-->
+<!--                                    SAMM-->
+<!--                                </h1>-->
+<!--                                <p>-->
+<!--                                    Smart Automatic Meal Maker-->
+<!--                                </p>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="fxt-form">-->
+<!--                        <form-->
+<!--                                class="mt-6"-->
+<!--                                [formGroup]="signInForm">-->
+
+<!--                            <div class="row">-->
+
+<!--                                <mat-form-field class="mb-3" >-->
+<!--                                    <mat-label>Email</mat-label>-->
+<!--                                    <input-->
+<!--                                            matInput-->
+<!--                                            placeholder="Enter Email"-->
+<!--                                            [formControlName]="'email'"-->
+<!--                                            required>-->
+<!--                                    <mat-error>Email Required</mat-error>-->
+<!--                                </mat-form-field>-->
+
+<!--                                <mat-form-field>-->
+<!--                                    <mat-label>Password</mat-label>-->
+<!--                                    <input-->
+<!--                                            matInput-->
+<!--                                            type="password"-->
+<!--                                            placeholder="Enter Password"-->
+<!--                                            [formControlName]="'password'"-->
+<!--                                            required>-->
+<!--                                    <mat-error>Password Required</mat-error>-->
+<!--                                </mat-form-field>-->
+
+
+<!--                <div class="inline-flex items-end justify-between w-full mt-1.5">-->
+<!--                   <a-->
+<!--                       class="text-md font-medium text-primary-500 hover:underline"-->
+<!--                       [routerLink]="['forgot-password']">forgot password?-->
+<!--                 </a>-->
+<!--                    &lt;!&ndash; <a class="text-primary underline fw-bold" [routerLink]="['/register']">-->
+<!--                        Sign Up-->
+<!--                    </a> &ndash;&gt;-->
+<!--                </div>-->
+
+<!--                            </div>-->
+
+<!--                        </form>-->
+<!--                        <div class="text-right mt-3">-->
+<!--                            <button class="w-100"  mat-raised-button color="primary" (click)="onSubmit()">-->
+<!--                                Submit-->
+<!--                            </button>-->
+<!--                    </div>-->
+<!--                     <div class="text-right mt-3">-->
+<!--                        <button class="w-100 google-signin-button text-primary" mat-raised-button  (click)="onGoogleSigninSuccess()">-->
+<!--                            <img src="assets/google-icon.png" alt="Google Icon" class="google-icon">-->
+<!--                            Login With Google-->
+<!--                        </button>-->
+
+<!--                </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 
 
