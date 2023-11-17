@@ -3,9 +3,9 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { ToastrService } from "ngx-toastr";
 import { TeamManagmentService } from "../teamManagment.service";
-import { NgxSpinnerService } from "ngx-spinner";
 import { catchError, finalize } from "rxjs";
 import { DomainUtills } from "app/utilities/domain/domain-utils";
+import { LoaderService } from "app/modules/shared/loader/loader.service";
 
 @Component({
   selector: "app-add-user",
@@ -26,7 +26,7 @@ export class AddUserComponent {
     private dialogRef: MatDialogRef<AddUserComponent>,
     private teamManagmentService:TeamManagmentService,
     private toastr: ToastrService,
-    private spinner: NgxSpinnerService,
+     public loaderService: LoaderService,
     
   ) {}
 
@@ -107,11 +107,12 @@ export class AddUserComponent {
   }
 
   onSubmit() {
-    this.spinner.show();
+    this.loaderService.isLoading = true;
     this.teamManagmentService.AddUpdateUser(this.usersForm.value)
     .pipe(
         finalize(() => {
-          this.spinner.hide();
+          this.loaderService.isLoading = false;
+
         })
     )
     .subscribe((res) => {
@@ -132,11 +133,12 @@ export class AddUserComponent {
   }
 
   UploadImage(){
-    this.spinner.show();
+    this.loaderService.isLoading = true;
     this.teamManagmentService.UploadProfilePic(this.usersForm.get('user_id').value,this.selectedFile)
     .pipe(
         finalize(() => {
-          this.spinner.hide();
+          this.loaderService.isLoading = false;
+
         })
     )
     .subscribe((res) => {
@@ -156,11 +158,12 @@ export class AddUserComponent {
 
 
   GetRolesLOV(){
-      this.spinner.show();
+      this.loaderService.isLoading = true;
       this.teamManagmentService.GetRole({})
       .pipe(
           finalize(() => {
-            this.spinner.hide();
+            this.loaderService.isLoading = false;
+
           })
       )
       .subscribe((res) => {

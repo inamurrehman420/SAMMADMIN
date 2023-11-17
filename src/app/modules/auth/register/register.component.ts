@@ -6,8 +6,8 @@ import { ToastrService } from "ngx-toastr";
 import { AuthService } from "../auth.service";
 import { finalize } from "rxjs";
 import { __assign } from "tslib";
-import { NgxSpinnerService } from "ngx-spinner";
 import { DomainUtills } from "app/utilities/domain/domain-utils";
+import { LoaderService } from "app/modules/shared/loader/loader.service";
 
 @Component({
   selector: "app-register",
@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
     private dialogRef: MatDialog,
     private toastr: ToastrService,
     private authService:AuthService,
-    private spinner: NgxSpinnerService,
+     public loaderService: LoaderService,
   ) {}
   
   private domainUtills = new DomainUtills();
@@ -43,11 +43,12 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    this.spinner.show();
+    this.loaderService.isLoading = true;
     this.authService.Register(this.signUpForm.value)
     .pipe(
         finalize(() => {
-           this.spinner.hide();
+           this.loaderService.isLoading = false;
+
         })
     )
     .subscribe((res) => {

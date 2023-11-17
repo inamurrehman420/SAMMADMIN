@@ -150,11 +150,12 @@ export class DashboardComponent implements OnInit {
   }
 
   GetUser(){
-    // this.spinner.show();
+    // this.loaderService.isLoading = true;
     this.teamManagmentService.GetUser({page:1,limit:1})
     .pipe(
         finalize(() => {
-          // this.spinner.hide();
+          // this.loaderService.isLoading = false;
+
         })
     )
     .subscribe((res) => {
