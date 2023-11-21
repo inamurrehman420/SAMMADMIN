@@ -11,3 +11,9 @@
 .card-header-danger {
   background: #e2b142 !important;
 }
+
+.avatar-img {
+  width: 80px; /* or any other size */
+  height: 80px; /* this should be the same as width for a perfect circle */
+  object-fit: cover; /* this will ensure that the image covers the area without being stretched */
+}
