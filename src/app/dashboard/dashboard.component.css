@@ -18,6 +18,28 @@
 .mat-form-field-wrapper{
     padding-bottom: 0px !important;
 }
+<<<<<<< HEAD
+
+
+.glass-effect {
+    margin: 6px;
+    backdrop-filter: blur(5px); /* Blur effect for the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.border {
+    border: none; /* Remove the default border */
+}
+
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+    background-color: #e2b142 !important;
+=======
 .btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
     position: relative;
     display: inline-block;
@@ -26,4 +48,5 @@
     margin-bottom: -1em;
     font-size: 1.1rem;
     vertical-align: middle;
+>>>>>>> 86290031962be19fd89de5fee4fb81fa679aa757
 }

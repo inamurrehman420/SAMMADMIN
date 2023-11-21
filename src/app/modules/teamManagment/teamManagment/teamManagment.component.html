@@ -1,3 +1,145 @@
+<div class="main-content mx-4">
+    <div class="container-fluid">
+
+
+
+
+        <div class="row bg-white shadow rounded px-4 pt-4 pb-3">
+
+            <div class="col-lg-4">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Enter Recipe Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field class="example-full-width w-100" appearance="outline">
+                    <mat-label>Enter Recipe Description</mat-label>
+                    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                </mat-form-field>
+                <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Select Category</mat-label>
+                    <mat-select>
+                        <mat-option value="one">First option</mat-option>
+                        <mat-option value="two">Second option</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-3">
+
+                <img src="assets/img/ecipe.avif" class="w-100 image-responsive" />
+<!--                <mat-form-field class="example-full-width w-100">-->
+<!--                    <input type="file" hidden #fileInput>-->
+<!--                    <button mat-icon-button (click)="fileInput.click()">-->
+<!--                        <mat-icon>file_upload</mat-icon>-->
+<!--                        Upload Image-->
+<!--                    </button>-->
+<!--                </mat-form-field>-->
+
+                <button class="w-100 btn btn-primary">
+                    <i class="fa fa-upload mr-2"></i>
+                    Upload Picture
+                </button>
+
+
+            </div>
+            <div class="col-lg-5">
+
+                    <div class="d-flex">
+                        <div class="glass-effect  card-icon" style="width: 140px; height:75px;">B1</div>
+                        <div class="glass-effect  card-icon" style="width: 180px; height:75px;">B2</div>
+                        <div class="glass-effect  card-icon" style="width: 140px; height:75px;">B3</div>
+                    </div>
+
+                    <div class="d-flex  ">
+                        <div class="glass-effect card-icon" style="width: 140px; height:200px;">B4</div>
+                        <div class="glass-effect" style="width: 180px; height:200px;">
+
+                            <div class="d-flex" style="flex-wrap: wrap; justify-content: center;">
+                                <div class="glass-effect bg-secondary" style="width: 45px; height:45px;  ">B1</div>
+                                <div class="glass-effect  bg-secondary" style="width: 45px; height:45px;  ">B2</div>
+                                <div class="glass-effect  bg-secondary" style="width: 45px; height:45px;  ">B3</div>
+                                <div class="glass-effect bg-secondary" style="width: 45px; height:45px;  ">B1</div>
+                                <div class="glass-effect  bg-danger" style="width: 45px; height:45px;  ">B2</div>
+                                <div class="glass-effect  bg-secondary" style="width: 45px; height:45px;  ">B3</div>
+                                <div class="glass-effect bg-secondary" style="width: 45px; height:45px;  ">B1</div>
+                                <div class="glass-effect  bg-secondary" style="width: 45px; height:45px;  ">B2</div>
+                                <div class="glass-effect  bg-secondary" style="width: 45px; height:45px;  ">B3</div>
+                            </div>
+
+
+                        </div>
+                        <div class="glass-effect card-icon" style="width: 140px; height:200px;">B6</div>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="glass-effect card-icon" style="width: 140px; height:75px;">B7</div>
+                        <div class="glass-effect card-icon" style="width: 180px; height:75px;">B8</div>
+                        <div class="glass-effect card-icon" style="width: 140px; height:75px;">B9</div>
+                    </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="col-lg-12 text-center">
+                <button mat-fab class="btn-primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </div>
+
+
+<div class="row bg-primary shadow rounded px-4 pt-4 mt-4">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-4">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Enter Ingredient Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-4">
+                <mat-form-field class="w-100" appearance="outline">
+                    <mat-label>Select Type</mat-label>
+                    <mat-select>
+                        <mat-option value="one">First Type</mat-option>
+                        <mat-option value="two">Second Type</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-4">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Enter Quantity</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Enter Cooking Temperature</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-4">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Enter Cooking Temperature</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <div class="col-lg-4">
+                <mat-form-field class="w-100 " appearance="outline">
+                    <mat-label>Enter Cooking Time</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
@@ -22,6 +164,7 @@
                     <div class="card-body">
                         <div class="table-responsive">
                             <table mat-table [dataSource]="dataSource" matSort class="table">
+
 
                                 <ng-container matColumnDef="id">
                                     <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
@@ -111,5 +254,135 @@
                 </div>
             </div>
         </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--      <div class="row">-->
+        <!--          <div class="col-lg-3 col-md-6 col-sm-6">-->
+        <!--              <div class="card card-stats">-->
+        <!--                  <div class="card-header card-header-warning card-header-icon">-->
+        <!--                      <div class="card-icon">-->
+        <!--                          <i class="material-icons">verified_user</i>-->
+        <!--                      </div>-->
+        <!--                      <p class="card-category">Admin</p>-->
+        <!--                      <h3 class="card-title">5-->
+        <!--                      </h3>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-footer">-->
+        <!--                      <div class="stats">-->
+        <!--                          <i class="material-icons">update</i> Just Updated-->
+        <!--                      </div>-->
+        <!--                  </div>-->
+        <!--              </div>-->
+        <!--          </div>-->
+        <!--          <div class="col-lg-3 col-md-6 col-sm-6">-->
+        <!--              <div class="card card-stats">-->
+        <!--                  <div class="card-header card-header-success card-header-icon">-->
+        <!--                      <div class="card-icon">-->
+        <!--                          <i class="material-icons">supervised_user_circle </i>-->
+        <!--                      </div>-->
+        <!--                      <p class="card-category">Customers</p>-->
+        <!--                      <h3 class="card-title">46</h3>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-footer">-->
+        <!--                      <div class="stats">-->
+        <!--                          <i class="material-icons">update</i> Just Updated-->
+        <!--                      </div>-->
+        <!--                  </div>-->
+        <!--              </div>-->
+        <!--          </div>-->
+        <!--          <div class="col-lg-3 col-md-6 col-sm-6">-->
+        <!--              <div class="card card-stats">-->
+        <!--                  <div class="card-header  card-header-icon">-->
+        <!--                      <div class="card-icon">-->
+        <!--                          <i class="fa fa-users"></i>-->
+        <!--                      </div>-->
+        <!--                      <p class="card-category">Overall Users</p>-->
+        <!--                      <h3 class="card-title">51</h3>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-footer">-->
+        <!--                      <div class="stats">-->
+        <!--                          <i class="material-icons">update</i> Just Updated-->
+        <!--                      </div>-->
+        <!--                  </div>-->
+        <!--              </div>-->
+        <!--          </div>-->
+        <!--          <div class="col-lg-3 col-md-6 col-sm-6">-->
+        <!--              <div class="card card-stats">-->
+        <!--                  <div class="card-header  card-header-icon">-->
+        <!--                      <div class="card-icon- bg-danger">-->
+        <!--                          <i class="material-icons">block</i>-->
+        <!--                      </div>-->
+        <!--                      <p class="card-category mt-2">Blocked Users</p>-->
+        <!--                      <h3 class="card-title">3</h3>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-footer">-->
+        <!--                      <div class="stats">-->
+        <!--                          <i class="material-icons">update</i> Just Updated-->
+        <!--                      </div>-->
+        <!--                  </div>-->
+        <!--              </div>-->
+        <!--          </div>-->
+        <!--      </div>-->
+
+
+
+        <!--      <div class="row">-->
+
+
+
+
+
+
+
+
+        <!--          <div class="col-md-6">-->
+        <!--              <div class="card card-chart">-->
+        <!--                  <div class="card-header card-header-success">-->
+        <!--                      <div class="ct-chart" id="dailySalesChart"></div>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-body">-->
+        <!--                      <h4 class="card-title">Daily Sales</h4>-->
+        <!--                      <p class="card-category">-->
+        <!--                          <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-footer">-->
+        <!--                      <div class="stats">-->
+        <!--                          <i class="material-icons">access_time</i> updated 4 minutes ago-->
+        <!--                      </div>-->
+        <!--                  </div>-->
+        <!--              </div>-->
+        <!--          </div>-->
+        <!--          <div class="col-md-6">-->
+        <!--              <div class="card card-chart">-->
+        <!--                  <div class="card-header card-header-info">-->
+        <!--                      <div class="ct-chart" id="completedTasksChart"></div>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-body">-->
+        <!--                      <h4 class="card-title">Completed Tasks</h4>-->
+        <!--                      <p class="card-category">Last Campaign Performance</p>-->
+        <!--                  </div>-->
+        <!--                  <div class="card-footer">-->
+        <!--                      <div class="stats">-->
+        <!--                          <i class="material-icons">access_time</i> campaign sent 2 days ago-->
+        <!--                      </div>-->
+        <!--                  </div>-->
+        <!--              </div>-->
+        <!--          </div>-->
+        <!--      </div>-->
+
     </div>
 </div>
