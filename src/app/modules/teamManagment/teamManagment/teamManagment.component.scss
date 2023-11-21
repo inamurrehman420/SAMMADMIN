@@ -1,3 +1,16 @@
+.card-icon{
+  background: #e2b142 !important;
+}
+
+.card-icon- {
+  background: #e53935 !important;
+  border-radius: 3px;
+  padding: 15px;
+  margin-top: -20px;
+  margin-right: 15px;
+  float: left;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(55, 55, 55, 0.4);
+}
 .btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
   position: relative;
   display: inline-block;
@@ -6,8 +19,17 @@
   margin-bottom: -1em;
   font-size: 1.1rem;
   vertical-align: middle;
+
 }
 
 .card-header-danger {
   background: #e2b142 !important;
+
 }
+
+.avatar-img {
+  width: 80px; /* or any other size */
+  height: 80px; /* this should be the same as width for a perfect circle */
+  object-fit: cover; /* this will ensure that the image covers the area without being stretched */
+}
+
