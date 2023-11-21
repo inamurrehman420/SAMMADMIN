@@ -8,7 +8,7 @@ import { FormControl } from "@angular/forms";
 import { TeamManagmentService } from "../teamManagment.service";
 import { finalize } from "rxjs";
 import { ToastrService } from "ngx-toastr";
-import { NgxSpinnerService } from "ngx-spinner";
+import { LoaderService } from "app/modules/shared/loader/loader.service";
 
 export interface UserData {
   
@@ -90,7 +90,7 @@ export class TeamManagmentComponent implements OnInit{
               private dialogRef: MatDialog,
               private teamManagmentService:TeamManagmentService,
               private toastr: ToastrService,
-              private spinner: NgxSpinnerService,) {
+               public loaderService: LoaderService,) {
    
   }
 
@@ -116,11 +116,12 @@ export class TeamManagmentComponent implements OnInit{
 
   //   dialogRef.afterClosed().subscribe((data) => {
   //     if (data === true) {
-  //       this.spinner.show();
+  //       this.loaderService.isLoading = true;
   //       this.teamManagmentService.RemoveUser(id)
   //       .pipe(
   //           finalize(() => {
-  //             this.spinner.hide();
+  //             this.loaderService.isLoading = false;
+
   //           })
   //       )
   //       .subscribe((res) => {
@@ -137,11 +138,12 @@ export class TeamManagmentComponent implements OnInit{
   // }
   
   GetUser(){
-    this.spinner.show();
+    this.loaderService.isLoading = true;
     this.teamManagmentService.GetUser({page:this.pageIndex+1,limit:this.pageSize})
     .pipe(
         finalize(() => {
-          this.spinner.hide();
+          this.loaderService.isLoading = false;
+
         })
     )
     .subscribe((res) => {

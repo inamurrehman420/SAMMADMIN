@@ -18,6 +18,7 @@
 .mat-form-field-wrapper{
     padding-bottom: 0px !important;
 }
+<<<<<<< HEAD
 
 
 .glass-effect {
@@ -38,4 +39,14 @@
 
 .mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
     background-color: #e2b142 !important;
+=======
+.btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    margin-top: -11px;
+    margin-bottom: -1em;
+    font-size: 1.1rem;
+    vertical-align: middle;
+>>>>>>> 86290031962be19fd89de5fee4fb81fa679aa757
 }

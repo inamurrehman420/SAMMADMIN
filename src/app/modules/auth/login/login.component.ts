@@ -6,6 +6,7 @@ import { AuthService } from "../auth.service";
 import { finalize } from "rxjs";
 import { ToastrService } from "ngx-toastr";
 import { Router } from "@angular/router";
+import { LoaderService } from "app/modules/shared/loader/loader.service";
 
 @Component({
   selector: "app-login",
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private toastr: ToastrService,
     private authService:AuthService,
-    private spinner: NgxSpinnerService,
+     public loaderService: LoaderService,
   ) {
     // localStorage.clear();
   }
@@ -43,11 +44,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.spinner.show();
+    this.loaderService.isLoading = true;
     this.authService.login(this.signInForm.value)
     .pipe(
         finalize(() => {
-           this.spinner.hide();
+           this.loaderService.isLoading = false;
+
         })
     )
     .subscribe((res) => {

@@ -23,8 +23,8 @@ get ApiUrl() {
         let domain: string = environment.apiUrl;
         if (originalPath.includes("localhost")) {
             // domain = "http://localhost:3000/";
-            // domain = "http://localhost:7001/api/";
-            domain = "https://84ae-154-192-18-80.ngrok.io/api/"; //ngrok
+            domain = "http://localhost:7001/api/";
+            // domain = "https://84ae-154-192-18-80.ngrok.io/api/"; //ngrok
 
         }
         return domain;

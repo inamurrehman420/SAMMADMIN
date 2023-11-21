@@ -140,6 +140,32 @@
         </div>
     </div>
 
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <div class="d-flex w-100 align-items-center justify-content-between">
+                          <div class="d-grid">
+                              <h4 class="card-title ">User Management</h4>
+                              <p class="card-category"> Complete Details of the Users</p>
+                          </div>
+                          <div class=" text-end place-self-end">
+                              <button class="btn btn-primary" (click)="onAddUser()" mat-raised-button>
+                                  <mat-icon>add</mat-icon>
+                                  Add User
+                              </button>
+                          </div>
+                      </div>
+
+
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource" matSort class="table">
+
+
 </div>
 
 

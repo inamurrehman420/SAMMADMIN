@@ -1,3 +1,4 @@
+
 .card-icon{
   background: #e2b142 !important;
 }
@@ -10,10 +11,21 @@
   margin-right: 15px;
   float: left;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(55, 55, 55, 0.4);
+
+.btn .material-icons, .btn:not(.btn-just-icon):not(.btn-fab) .fa {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  margin-top: -11px;
+  margin-bottom: -1em;
+  font-size: 1.1rem;
+  vertical-align: middle;
+
 }
 
 .card-header-danger {
   background: #e2b142 !important;
+
 }
 .mat-form-field-wrapper{
   padding-bottom: 0px !important;
@@ -42,4 +54,5 @@
 
 .bg-primary {
   background-color: rgb(234 234 234 / 71%) !important;
+
 }
