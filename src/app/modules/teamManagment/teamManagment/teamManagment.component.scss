@@ -1,0 +1,45 @@
+.card-icon{
+  background: #e2b142 !important;
+}
+
+.card-icon- {
+  background: #e53935 !important;
+  border-radius: 3px;
+  padding: 15px;
+  margin-top: -20px;
+  margin-right: 15px;
+  float: left;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(55, 55, 55, 0.4);
+}
+
+.card-header-danger {
+  background: #e2b142 !important;
+}
+.mat-form-field-wrapper{
+  padding-bottom: 0px !important;
+}
+
+
+.glass-effect {
+  margin: 6px;
+  backdrop-filter: blur(5px); /* Blur effect for the background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Slight border */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border {
+  border: none; /* Remove the default border */
+}
+
+.mat-flat-button.mat-accent, .mat-raised-button.mat-accent, .mat-fab.mat-accent, .mat-mini-fab.mat-accent {
+  background-color: #373737 !important;
+}
+
+.bg-primary {
+  background-color: rgb(234 234 234 / 71%) !important;
+}

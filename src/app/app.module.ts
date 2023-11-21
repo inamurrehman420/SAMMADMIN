@@ -12,7 +12,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { AdminAccessGuard } from './guards/admin-access.guard';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpModule } from './http/http.module';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 const lang = "en-US";
 
 @NgModule({
@@ -24,6 +25,8 @@ const lang = "en-US";
     HttpModule.forRoot(),
     ComponentsModule,
     RouterModule,
+    MatButtonModule,
+    MatIconModule,
     AppRoutingModule,
     ToastrModule.forRoot({
       closeButton: true,
