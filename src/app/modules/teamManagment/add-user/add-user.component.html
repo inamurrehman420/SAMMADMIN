@@ -1,4 +1,4 @@
-<div class="container  mt-3">
+<div class="container">
     <div class="row px-3">
         <div class="col-lg-6">
             <h3 class="text-primary mt-3 fw-bold text-xl"> Add User</h3>
@@ -11,20 +11,20 @@
     </div>
 </div>
 
-<div class="container px-3 pt-3">
+<div class="container mt-3 pt-3">
     <form
     class="mt-6"
     [formGroup]="usersForm">
 
         <div class="row px-3 ">
-            <div class="col-lg-3 grid align-items-center text-center  justify-items-center">
+            <div class="col-lg-3 grid align-items-center text-center align-self-center justify-items-center">
                 <div *ngIf="avatarURL" class="position-relative ">
                     <img class="mx-auto border-4  border-b-gray-800 rounded-circle" [src]="avatarURL"  >
-                    <button style="top: 23px;right: 26px;" class="position-absolute text-primary bg-white rounded shadow" mat-button (click)="removeImg()"><mat-icon >cancel</mat-icon>
-                     </button> 
+                    <button style="top: 0px;right: 36px;" class="position-absolute text-primary bg-white rounded shadow" mat-button (click)="removeImg()"><mat-icon >cancel</mat-icon>
+                     </button>
                 </div>
                 <input #file type="file" accept='image/*' [hidden]="true" (change)="onFileChange($event)" formControlName="profile_picture"/>
-                <button mat-raised-button color="primary" material-icons (mousedown)="file.click();" *ngIf="!avatarURL"><mat-icon class="text-white me-3">image</mat-icon>Upload Image</button>
+                <button mat-raised-button class="btn-primary" material-icons (mousedown)="file.click();" *ngIf="!avatarURL"><mat-icon class="text-white mr-2">upload</mat-icon>Upload Image</button>
             </div>
             <div class="col-lg-9">
 

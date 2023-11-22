@@ -4,14 +4,22 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title ">User Management</h4>
-                        <p class="card-category"> Complete Details of the Users</p>
-                        <div class="col-lg-12 text-end place-self-end">
-                          <button color="primary" (click)="onAddUser()" mat-raised-button>
-                            <mat-icon>add</mat-icon>
-                            Add User
-                          </button>
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="">
+                                <h4 class="card-title ">User Management</h4>
+                                <p class="card-category"> Complete Details of the Users</p>
+                            </div>
+                            <div class="">
+                                <div class=" text-end place-self-end">
+                                    <button class="btn-primary" (click)="onAddUser()" mat-raised-button>
+                                        <mat-icon>add</mat-icon>
+                                        Add User
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+
+
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -22,14 +30,10 @@
                                 <td mat-cell *matCellDef="let row">
                                   <span *ngIf="row?.profile_pic_path">
                                     <a class="btn avatar-button rounded-circle overflow-hidden p-0 m-0 d-inline-flex">
-                                      <!-- <span data-v-0a07f886="" > -->
-                        
-                                      <img
-                                        class="avatar-span border-0 d-inline-flex align-items-center justify-content-center text-white text-uppercase text-nowrap font-weight-normal"
-                                        [src]="getImg(row.profile_pic_path)" />
-                        
-                                      <!-- </span> -->
+                                      <img style="width: 30px; height: 30px;"
+                                              [src]="getImg(row.profile_pic_path)" />
                                     </a>
+
                                     <!---->
                                   </span>
                                   <span *ngIf="!row?.profile_pic_path">
@@ -40,7 +44,7 @@
                                     <!---->
                                   </span>
                         
-                                  <span class="font-bold text-primary ms-2">{{row.user_id}}</span>
+                                  <span style="padding-left: 15px; font-weight: bold;" class="  text-primary ps-2">{{row.user_id}}</span>
                                 </td>
                               </ng-container>
                         
