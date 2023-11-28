@@ -18,14 +18,14 @@ const routes: Routes = [
         path: "sign-in",
         component: LoginComponent,
       },
-      {
-        path:'register',
-        component:RegisterComponent,
-      },
-      {
-        path:'forgot-password',
-        component:ForgotPasswordComponent
-      },
+      // {
+      //   path:'register',
+      //   component:RegisterComponent,
+      // },
+      // {
+      //   path:'forgot-password',
+      //   component:ForgotPasswordComponent
+      // },
       {
         path:'reset-password',
         component:ResetPasswordComponent
