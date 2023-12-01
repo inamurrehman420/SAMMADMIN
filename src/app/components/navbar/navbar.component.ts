@@ -3,6 +3,7 @@ import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { AddUserComponent } from '../update-profile/add-user.component';
 // import { AddUserComponent } from 'app/modules/teamManagment/add-user/add-user.component';
 
 @Component({
@@ -126,17 +127,18 @@ export class NavbarComponent implements OnInit {
     }
 
     openDialog(): void {
-            // const dialogRef = this.dialog.open(AddUserComponent, {
-            //   width: "70%",
-            //   height: "auto",
-            // });
+        const data = JSON.parse(localStorage.getItem('UserInfo'));
+            const dialogRef = this.dialog.open(AddUserComponent, {
+              width: "70%",
+              height: "auto",
+              data:data
+            });
         
-            // dialogRef.afterClosed().subscribe((data) => { 
-            //   if (data === true) {
-                
-            //     // this.GetUser();
-            //   }
-            // });
+            dialogRef.afterClosed().subscribe((data) => { 
+              if (data === true) {
+                // this.GetUser();
+              }
+            });
           }
 }
 
