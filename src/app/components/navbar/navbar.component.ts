@@ -2,6 +2,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+// import { AddUserComponent } from 'app/modules/teamManagment/add-user/add-user.component';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +17,7 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(location: Location,  private element: ElementRef, private router: Router) {
+    constructor(location: Location,  private element: ElementRef, private router: Router,private dialog: MatDialog,) {
       this.location = location;
           this.sidebarVisible = false;
     }
@@ -122,4 +124,19 @@ export class NavbarComponent implements OnInit {
       }
       return 'Dashboard';
     }
+
+    openDialog(): void {
+            // const dialogRef = this.dialog.open(AddUserComponent, {
+            //   width: "70%",
+            //   height: "auto",
+            // });
+        
+            // dialogRef.afterClosed().subscribe((data) => { 
+            //   if (data === true) {
+                
+            //     // this.GetUser();
+            //   }
+            // });
+          }
 }
+
