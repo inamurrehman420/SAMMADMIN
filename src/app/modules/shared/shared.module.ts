@@ -25,12 +25,9 @@ import { NumberAndDecimalDirective } from "app/directives/number-and-decimal.dir
 import { NumberOnlyDirective } from "app/directives/number-only.directive";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from "ngx-toastr";
-import { AddUserComponent } from "../teamManagment/add-user/add-user.component";
 @NgModule({
     declarations: [
         // ViewFileComponent,
-        
-    AddUserComponent,
         AlphabetOnlyDirective,
         NumberOnlyDirective,
         AlphaNumericFieldDirective,
