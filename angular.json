@@ -16,11 +16,13 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
+            "inlineStyleLanguage": "css",
             "assets": [
               "src/assets",
               "src/favicon.ico"
             ],
             "styles": [
+              "src/styles.scss",
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/scss/material-dashboard.scss",
               "src/assets/css/demo.css"

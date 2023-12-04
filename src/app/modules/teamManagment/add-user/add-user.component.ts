@@ -6,6 +6,7 @@ import { TeamManagmentService } from "../teamManagment.service";
 import { catchError, finalize } from "rxjs";
 import { DomainUtills } from "app/utilities/domain/domain-utils";
 import { LoaderService } from "app/modules/shared/loader/loader.service";
+import { environment } from "environments/environment";
 
 @Component({
   selector: "app-add-user",
@@ -39,7 +40,7 @@ export class AddUserComponent {
       // console.log(this.domainutil.GetDomain()+this.data.profile_pic_path)
       // console.log("http://localhost:7001"+this.data.profile_pic_path);
       if(this.data.profile_pic_path)
-      this.avatarURL = "http://localhost:7001"+this.data.profile_pic_path;
+      this.avatarURL = environment.apiUrl+this.data.profile_pic_path;
     }
   }
 
