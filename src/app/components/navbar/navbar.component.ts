@@ -4,6 +4,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { AddUserComponent } from '../update-profile/add-user.component';
+import { ChangePasswordComponent } from '../change-password/change-password.component';
 // import { AddUserComponent } from 'app/modules/teamManagment/add-user/add-user.component';
 
 @Component({
@@ -140,5 +141,20 @@ export class NavbarComponent implements OnInit {
               }
             });
           }
+
+          changePassword(): void {
+            const data = JSON.parse(localStorage.getItem('UserInfo'));
+                const dialogRef = this.dialog.open(ChangePasswordComponent, {
+                  width: "70%",
+                  height: "auto",
+                  data:data
+                });
+            
+                dialogRef.afterClosed().subscribe((data) => { 
+                  if (data === true) {
+                    // this.GetUser();
+                  }
+                });
+              }
 }
 

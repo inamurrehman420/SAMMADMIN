@@ -10,7 +10,6 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { CommonModule } from '@angular/common';
 import { GoogleSigninModule } from '../google-signin-module';
 import { ToastrModule } from 'ngx-toastr';
-import { PasswordToggleDirective } from 'app/directives/password-toggle.directive';
 import { ChangePasswordComponent } from 'app/components/change-password/change-password.component';
 
 @NgModule({
@@ -21,7 +20,7 @@ import { ChangePasswordComponent } from 'app/components/change-password/change-p
     RegisterComponent,
     CallbackComponent,
     ChangePasswordComponent,
-    PasswordToggleDirective
+    
   ],
   imports: [
     CommonModule,

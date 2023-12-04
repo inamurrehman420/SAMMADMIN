@@ -9,12 +9,13 @@ import { AddUserComponent } from './update-profile/add-user.component';
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     FooterComponent,
     NavbarComponent,
-    SidebarComponent,AddUserComponent
+    SidebarComponent,
+    AddUserComponent,
   
   ],
   exports: [

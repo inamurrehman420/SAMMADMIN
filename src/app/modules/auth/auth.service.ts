@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   ChangePassword(formData: any) {
-    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/authenticate', formData)
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'user/change-password', formData)
   }
   ResetLink(formData: any) {
     return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/reset-link', formData)

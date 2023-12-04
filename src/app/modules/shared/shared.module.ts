@@ -23,6 +23,7 @@ import { AlphabetOnlyDirective } from "app/directives/alphabet-only.directive";
 import { CapsOnlyDirective } from "app/directives/caps-only.directive";
 import { NumberAndDecimalDirective } from "app/directives/number-and-decimal.directive";
 import { NumberOnlyDirective } from "app/directives/number-only.directive";
+import { PasswordToggleDirective } from "app/directives/password-toggle.directive";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from "ngx-toastr";
 @NgModule({
@@ -34,6 +35,7 @@ import { ToastrModule } from "ngx-toastr";
         CapsOnlyDirective,
         AlphaNumSpecialDirective,
         NumberAndDecimalDirective,
+        PasswordToggleDirective,
     ],
     imports: [
         CommonModule,
@@ -70,6 +72,7 @@ import { ToastrModule } from "ngx-toastr";
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
     exports: [
+
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
@@ -94,6 +97,7 @@ import { ToastrModule } from "ngx-toastr";
         CapsOnlyDirective,
         AlphaNumSpecialDirective,
         NumberAndDecimalDirective,
+        PasswordToggleDirective,
 
         RouterModule,
         NgxSpinnerModule,

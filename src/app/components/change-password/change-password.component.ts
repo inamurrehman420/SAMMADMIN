@@ -67,12 +67,16 @@ export class ChangePasswordComponent {
 
   onSubmit() {
     this.loaderService.isLoading = true;
+    const user_id = JSON.parse(localStorage.getItem('UserInfo')).user_id
+    console.log(JSON.parse(localStorage.getItem('UserInfo')))
+
+    console.log(JSON.parse(localStorage.getItem('UserInfo')).user_id)
     const body = {
-      ...this.token,
+      user_id:user_id,
       ...this.resetPasswordForm.value
     }
     this._authService
-    .ResetPassword(body)
+    .ChangePassword(body)
     .pipe(
       finalize(() => {
         this.loaderService.isLoading = false;
@@ -82,7 +86,8 @@ export class ChangePasswordComponent {
     .subscribe((resp)=>{
       if(resp.success){
         this.toaster.success(resp.message,'Success');
-        this.router.navigate(['/sign-in'])
+        // this.router.navigate(['/sign-in'])
+        this.dialogRef.close();
       }
       else{
           this.toaster.error(resp.message,'Error');
