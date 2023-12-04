@@ -13,6 +13,10 @@ export class TeamManagmentService {
     return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'user/get-all-users', obj)
   }
 
+  GetDashboard(obj:any) {
+    return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'dashboard/get-dashboard', obj)
+  }
+  
   AddUpdateUser(formData: any) {
     delete formData.profile_picture;
     delete formData.phone_number;

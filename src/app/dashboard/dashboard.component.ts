@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoaderService } from 'app/modules/shared/loader/loader.service';
 import { TeamManagmentService } from 'app/modules/teamManagment/teamManagment.service';
 import * as Chartist from 'chartist';
 import { finalize } from 'rxjs';
@@ -9,8 +10,8 @@ import { finalize } from 'rxjs';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(private teamManagmentService:TeamManagmentService,) { }
+  dashboard;
+  constructor(private teamManagmentService:TeamManagmentService,private loaderService:LoaderService) { }
   startAnimationForLineChart(chart){
       let seq: any, delays: any, durations: any;
       seq = 0;
@@ -69,7 +70,7 @@ export class DashboardComponent implements OnInit {
   };
   ngOnInit() {
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
-      this.GetUser();
+      this.GetDashboardDetails();
       const dataDailySalesChart: any = {
           labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
           series: [
@@ -149,16 +150,30 @@ export class DashboardComponent implements OnInit {
       this.startAnimationForBarChart(websiteViewsChart);
   }
 
-  GetUser(){
-    // this.loaderService.isLoading = true;
-    this.teamManagmentService.GetUser({page:1,limit:1})
+  // GetUser(){
+  //   // this.loaderService.isLoading = true;
+  //   this.teamManagmentService.GetUser({page:1,limit:1})
+  //   .pipe(
+  //       finalize(() => {
+  //         // this.loaderService.isLoading = false;
+
+  //       })
+  //   )
+  //   .subscribe((res) => {
+  //   });
+  // }
+
+  GetDashboardDetails(){
+    this.loaderService.isLoading = true;
+    this.teamManagmentService.GetDashboard({})
     .pipe(
         finalize(() => {
-          // this.loaderService.isLoading = false;
+          this.loaderService.isLoading = false;
 
         })
     )
     .subscribe((res) => {
+      this.dashboard = res.data;
     });
   }
 }

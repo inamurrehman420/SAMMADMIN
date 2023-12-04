@@ -16,7 +16,7 @@ import { LoaderService } from "app/modules/shared/loader/loader.service";
 export class LoginComponent implements OnInit {
   selectedTime: any;
   signInForm: FormGroup;
-
+  public showPassword: boolean=false;
   constructor(
     private _formBuilder: FormBuilder,
     private router: Router,
