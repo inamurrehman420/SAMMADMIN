@@ -30,12 +30,13 @@ export class AddUserComponent {
      public loaderService: LoaderService,
     
   ) {}
+  Title = "Add User"
 
   ngOnInit(): void {
     this.GetRolesLOV();
     this.userForm();
     if(this.data){
-      
+      this.Title = "Update User"
       this.usersForm.patchValue(this.data);
       // console.log(this.domainutil.GetDomain()+this.data.profile_pic_path)
       // console.log("http://localhost:7001"+this.data.profile_pic_path);

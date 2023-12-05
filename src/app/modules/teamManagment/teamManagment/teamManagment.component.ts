@@ -9,6 +9,7 @@ import { TeamManagmentService } from "../teamManagment.service";
 import { finalize } from "rxjs";
 import { ToastrService } from "ngx-toastr";
 import { LoaderService } from "app/modules/shared/loader/loader.service";
+import { DeleteComponent } from "app/modules/shared/delete/delete.component";
 
 export interface UserData {
   
@@ -107,35 +108,35 @@ export class TeamManagmentComponent implements OnInit{
       this.dataSource.paginator.firstPage();
     }
   }
-  onDelete(id) {}
-  // onDelete(id) {
-  //   const dialogRef = this.dialog.open(DeleteComponent, {
-  //     width: "24%",
-  //     height: "auto",
-  //   });
+  onDelete(id) {
+    const dialogRef = this.dialog.open(DeleteComponent, {
+      width: "24%",
+      height: "auto",
+    });
 
-  //   dialogRef.afterClosed().subscribe((data) => {
-  //     if (data === true) {
-  //       this.loaderService.isLoading = true;
-  //       this.teamManagmentService.RemoveUser(id)
-  //       .pipe(
-  //           finalize(() => {
-  //             this.loaderService.isLoading = false;
+    dialogRef.afterClosed().subscribe((data) => {
+      if (data === true) {
+        this.loaderService.isLoading = true;
+        this.teamManagmentService.RemoveUser(id)
+        .pipe(
+            finalize(() => {
+              this.loaderService.isLoading = false;
 
-  //           })
-  //       )
-  //       .subscribe((res) => {
-  //           if (res.success === true) {
-  //             this.toastr.success('Deleted','Success');
-  //           } else { 
-  //             this.toastr.error('Something went wrong','Failed');
+            })
+        )
+        .subscribe((res) => {
+            if (res.success === true) {
+              this.GetUser();
+              this.toastr.success('Deleted','Success');
+            } else { 
+              this.toastr.error('Something went wrong','Failed');
                
-  //           }
-  //       });
-  //     } 
-  //     }
-  //   )
-  // }
+            }
+        });
+      } 
+      }
+    )
+  }
   
   GetUser(){
     this.loaderService.isLoading = true;
@@ -155,6 +156,25 @@ export class TeamManagmentComponent implements OnInit{
           // this.dataSource.paginator.length = res.data.total_records;
           this.length = res.data[0].total_records;
           // this.toastr.success('Login Successfully','Success');
+        } else { 
+          this.toastr.error('Something went wrong','Failed');
+           
+        }
+    });
+  }
+
+  toggleBlock(id): void {
+    this.loaderService.isLoading = true;
+    this.teamManagmentService.BlockUser(id)
+    .pipe(
+        finalize(() => {
+          this.loaderService.isLoading = false;
+        })
+    )
+    .subscribe((res) => {
+        console.log(res);
+        if (res.success === true) {
+          this.GetUser();
         } else { 
           this.toastr.error('Something went wrong','Failed');
            

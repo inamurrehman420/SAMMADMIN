@@ -88,6 +88,10 @@
                                   <mat-icon class="pointer position-relative" (click)="onDelete(row.user_id)" style="z-index: 99999" color="warn"
                                     matTooltipPosition="above" matTooltipClass="custom-tooltip" matTooltip="click to delete">delete</mat-icon>
                         
+                                    <button mat-raised-button class="mr-3 bg-secondary" (click)="toggleBlock(row.user_id)">
+                                      {{ row.is_blocked ? 'Unblock' : 'Block' }}
+                                    </button>
+
                                 </td>
                               </ng-container>
                         

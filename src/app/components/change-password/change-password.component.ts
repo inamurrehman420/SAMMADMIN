@@ -94,4 +94,9 @@ export class ChangePasswordComponent {
       }
     })
   }
+
+  onClose(val) {
+    this.dialogRef.close(val);
+  }
+
 }

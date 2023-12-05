@@ -1,0 +1,25 @@
+
+<div class="px-4 py-2">
+    <div class="row mt-4">
+        <div class="col-lg-3 text-center">
+            <img class="warning-icon mx-auto" style="width: 100%;" src="../../../assets/warning.png"/>
+
+        </div>
+        <div class="col-lg-9">
+            <h4 class="font-bold">Are You Sure You Want To Delete This Data!</h4>
+
+        </div>
+    </div>
+
+
+    <div class="container text-center overflow-hidden">
+        <div class="my-3 text-center">
+            <button mat-raised-button  (click)="onYes()" class="mr-2 bg-secondary">
+                Yes
+            </button>
+            <button mat-raised-button color="primary" (click)="onNo()">
+                No
+            </button>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,10 @@ export class TeamManagmentService {
     return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'user/get-all-users', obj)
   }
 
+  BlockUser(id:any) {
+    return this._dataService.genericServiceCaller(REQUESTTYPE.GET, `user/block-user/${id}`)  
+  }
+
   GetDashboard(obj:any) {
     return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'dashboard/get-dashboard', obj)
   }

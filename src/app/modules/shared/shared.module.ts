@@ -26,9 +26,11 @@ import { NumberOnlyDirective } from "app/directives/number-only.directive";
 import { PasswordToggleDirective } from "app/directives/password-toggle.directive";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from "ngx-toastr";
+import { DeleteComponent } from "./delete/delete.component";
 @NgModule({
     declarations: [
         // ViewFileComponent,
+        DeleteComponent,
         AlphabetOnlyDirective,
         NumberOnlyDirective,
         AlphaNumericFieldDirective,
