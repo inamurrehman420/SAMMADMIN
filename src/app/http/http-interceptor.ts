@@ -26,7 +26,8 @@ export class HttpResponseInterceptor implements HttpInterceptor {
   
      const customReq = request.clone({
           setHeaders: {
-            authorization: `bearer ${access_token}`
+            authorization: `bearer ${access_token}`,
+            channel_id:'2'
           }
       });
 

@@ -37,7 +37,6 @@ export class AddUserComponent {
     this.userForm();
     if(this.data){    
       this.usersForm.patchValue(this.data);
-      this.usersForm.controls['user_password'].setValue("");
       // console.log(this.domainutil.GetDomain()+this.data.profile_pic_path)
       // console.log("http://localhost:7001"+this.data.profile_pic_path);
       if(this.data.profile_pic_path)
@@ -52,7 +51,7 @@ export class AddUserComponent {
       full_name: ["", [Validators.required]],
       email: ["", [Validators.required]],
       phone_number: ["", [Validators.required]],
-      user_password: ["", [Validators.required]],
+      // user_password: ["", [Validators.required]],
       role_id: ["", [Validators.required]],
     });
   }
@@ -121,7 +120,7 @@ export class AddUserComponent {
         if (res.success === true) {
           // this.toastr.success("User Added Successfully", "Success");
           // this.toastr.success('Login Successfully','Success');
-        if (this.avatarURL.includes('base64')) {
+        if (this.avatarURL?.includes('base64')) {
           this.UploadImage();
         }else{
           this.dialogRef.close(true);
