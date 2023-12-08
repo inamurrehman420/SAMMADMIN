@@ -31,7 +31,7 @@
                 <div class="row mb-3 px-3">
 
                     <div class="col-lg-6">
-                        <mat-form-field class="w-100">
+                        <mat-form-field class="w-100" appearance="outline">
                             <mat-label>Name</mat-label>
                             <input
                                     matInput
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <mat-form-field class="w-100">
+                        <mat-form-field class="w-100" appearance="outline">
                             <mat-label>Email</mat-label>
                             <input
                                     matInput
@@ -61,7 +61,7 @@
 
                 <div class="row  mb-3  px-3">
                     <div class="col-lg-6">
-                        <mat-form-field class="w-100">
+                        <mat-form-field class="w-100" appearance="outline">
                             <mat-label>Password</mat-label>
                             <input [readonly]="data"
                                     matInput
@@ -73,7 +73,7 @@
                         </mat-form-field>
                     </div>
                         <div class="col-lg-6">
-                            <mat-form-field  class="w-100">
+                            <mat-form-field  class="w-100" appearance="outline">
                                 <mat-label>Select Role</mat-label>
                                 <mat-select  [formControlName]="'role_id'">
                                     <mat-option *ngFor="let role of Roles" [value]="role.role_id">
