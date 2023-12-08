@@ -11,6 +11,7 @@ export class AuthService {
 
 
   login(formData: any) {
+    formData.channel_id = '2';
     return this._dataService.genericServiceCaller(REQUESTTYPE.POST, 'auth/authenticate', formData)
   }
 
