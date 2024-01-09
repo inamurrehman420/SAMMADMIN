@@ -30,7 +30,7 @@ export class CallbackComponent implements OnInit {
       const data = this.jwtHelper.decodeToken(token);
       if(data){
         data.accessToken = token;
-        localStorage.setItem("UserInfo",JSON.stringify(data))
+        sessionStorage.setItem("UserInfo",JSON.stringify(data))
         this.toastr.success('Login Successfully','Success');
         this.router.navigateByUrl('/dashboard');
         return;

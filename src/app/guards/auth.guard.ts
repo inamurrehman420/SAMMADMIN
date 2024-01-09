@@ -28,7 +28,7 @@ export class AuthGuard implements CanActivate {
   async checkLogin(url: string): Promise<boolean> {
     
     let data: any = this.getQueryParams(url);
-    const token = localStorage.getItem('access_token')
+    const token = sessionStorage.getItem('access_token')
     if (token) {
       var validToken = !this.jwtHelper.isTokenExpired(token);
       if (validToken) {

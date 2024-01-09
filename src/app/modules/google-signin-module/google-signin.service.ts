@@ -27,11 +27,11 @@ export class GoogleAuthService {
       auth2.attachClickHandler(element, {}, function (googleUser) {
         //Getting profile object
         let profile = googleUser.getBasicProfile();
-        //Setting data to localstorage.
-        localStorage.setItem('token', googleUser.getAuthResponse().id_token);
-        localStorage.setItem('image', profile.getImageUrl());
-        localStorage.setItem('name', profile.getName());
-        localStorage.setItem('email', profile.getEmail());
+        //Setting data to sessionStorage.
+        sessionStorage.setItem('token', googleUser.getAuthResponse().id_token);
+        sessionStorage.setItem('image', profile.getImageUrl());
+        sessionStorage.setItem('name', profile.getName());
+        sessionStorage.setItem('email', profile.getEmail());
         // Alternatively you can create an object and return it like that - result = {
         // token: googleUser.getAuthResponse().id_token, name: profile.getName(), image:
         // profile.getImageUrl(), email: profile.getEmail(), };
@@ -60,10 +60,10 @@ export class GoogleAuthService {
   //         clearInterval(interval);
   //         debugger
   //         // Retrieve data from localStorage or the server once the window is closed
-  //         let token = localStorage.getItem('token');
-  //         let image = localStorage.getItem('image');
-  //         let name = localStorage.getItem('name');
-  //         let email = localStorage.getItem('email');
+  //         let token = sessionStorage.getItem('token');
+  //         let image = sessionStorage.getItem('image');
+  //         let name = sessionStorage.getItem('name');
+  //         let email = sessionStorage.getItem('email');
   //         // You can also use the result object if you choose to set it
   //         // const result = {
   //         //   token: token,

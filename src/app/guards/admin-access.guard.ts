@@ -17,7 +17,7 @@ export class AdminAccessGuard implements CanActivate {
 
   async checkAccess(url: string): Promise<boolean> {
     
-    const token = localStorage.getItem('access_token')
+    const token = sessionStorage.getItem('access_token')
     if (token) {
       let tokenInfo = this.jwtHelper.decodeToken(token);
       if (tokenInfo.isAdmin) {

@@ -54,23 +54,31 @@
                                     <mat-label>Password</mat-label>
                                     <input
                                             matInput
-                                            type="password"
+                                            [type]="pwToggle.type"
                                             placeholder="Enter Password"
                                             [formControlName]="'user_password'"
                                             required>
+                                            <button mat-icon-button matSuffix appPasswordToggle #pwToggle="appPasswordToggle">
+                                                <mat-icon>{{ pwToggle.icon }}</mat-icon>
+                                                </button>
+                                    <mat-error>Password Required</mat-error>
                                 </mat-form-field>
                                 <mat-form-field  class="w-100" appearance="outline">
                                     <mat-label>Confirm Password</mat-label>
                                     <input
                                             matInput
-                                            type="password"
+                                            [type]="pwToggle1.type"
                                             placeholder="Enter Confirm Password"
                                             [formControlName]="'confirm_password'"
                                             required>
+                                            <button mat-icon-button matSuffix appPasswordToggle #pwToggle1="appPasswordToggle">
+                                                <mat-icon>{{ pwToggle1.icon }}</mat-icon>
+                                                </button>
+                                    <mat-error>Password Required</mat-error>
                                 </mat-form-field>
 
 
-                                <div class="inline-flex items-end  w-full">
+                                <!-- <div class="inline-flex items-end  w-full">
 
                                     <label>
                                         Already a member?
@@ -79,7 +87,7 @@
                                             class="text-md font-medium ms-2 text-primary-500 hover:underline"
                                             [routerLink]="['/sign-in']">Sign In
                                     </a>
-                                </div>
+                                </div> -->
 
 
 
@@ -113,8 +121,8 @@
                         </div>
                     </div>
 
-                    <div class="fxt-switcher-description mt-3">Don't have an account?
-                        <a class="fxt-switcher-text ms-1" >Register</a>
+                    <div class="fxt-switcher-description mt-3">Already have an account?
+                        <a class="fxt-switcher-text ms-1" routerLink = '/sign-in' >Sign In</a>
                     </div>
                 </div>
             </div>

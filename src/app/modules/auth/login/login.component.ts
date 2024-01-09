@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     private authService:AuthService,
      public loaderService: LoaderService,
   ) {
-    // localStorage.clear();
+    // sessionStorage.clear();
   }
   private domainUtills = new DomainUtills();
   ngOnInit(): void {
@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
     )
     .subscribe((res) => {
         if (res.success === true) {
-          localStorage.setItem("UserInfo",JSON.stringify(res.data))
+          sessionStorage.setItem("UserInfo",JSON.stringify(res.data))
           this.toastr.success('Login Successfully','Success');
           this.router.navigateByUrl('/dashboard');
    

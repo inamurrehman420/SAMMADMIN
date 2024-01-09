@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit {
     )
     .subscribe((res) => {
         if (res.success === true) {
-          // localStorage.setItem("UserInfo",JSON.stringify(res.data))
+          // sessionStorage.setItem("UserInfo",JSON.stringify(res.data))
           this.toastr.success('Login Successfully','Success');
           this.router.navigateByUrl('/sign-in');
    

@@ -67,10 +67,10 @@ export class ChangePasswordComponent {
 
   onSubmit() {
     this.loaderService.isLoading = true;
-    const user_id = JSON.parse(localStorage.getItem('UserInfo')).user_id
-    console.log(JSON.parse(localStorage.getItem('UserInfo')))
+    const user_id = JSON.parse(sessionStorage.getItem('UserInfo')).user_id
+    console.log(JSON.parse(sessionStorage.getItem('UserInfo')))
 
-    console.log(JSON.parse(localStorage.getItem('UserInfo')).user_id)
+    console.log(JSON.parse(sessionStorage.getItem('UserInfo')).user_id)
     const body = {
       user_id:user_id,
       ...this.resetPasswordForm.value
