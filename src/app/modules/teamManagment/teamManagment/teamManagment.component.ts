@@ -54,7 +54,7 @@ export class TeamManagmentComponent implements OnInit{
     });
   }
   getImg(val){
-    return environment.imageBaseUrl+val;
+    return val;
   }
 
   onUpdateUser(data:any): void {
