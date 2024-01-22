@@ -1,0 +1,46 @@
+<div class="container mt-3">
+  <div class="row px-3">
+    <div class="col-lg-6">
+      <h3 class="text-primary mt-3 fw-bold text-xl">Add Device</h3>
+    </div>
+    <div class="col-lg-6 text-right">
+      <button mat-button (click)="onClose(false)">
+        <mat-icon class="mx-0">clear</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="container px-3 pt-3">
+  <form class="mt-6" [formGroup]="usersForm">
+    <div class="row px-3">
+      <div class="col-lg-9">
+        <div class="row mb-3 px-3">
+          <div class="col-lg-12">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Remarks</mat-label>
+              <textarea matInput
+              [readonly]="data"
+              placeholder="Enter Remarks"
+              [formControlName]="'recipe_remarks'"></textarea>
+              <mat-error>Remarks is Required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="text-right mb-3 mt-4 pt-5 me-3">
+    <button
+      mat-raised-button
+      class="mr-3 text-white bg-secondary"
+      (click)="onSubmit()"
+      [disabled] = "!usersForm.valid"
+    >
+      Submit
+    </button>
+    <button mat-raised-button color="primary" (click)="onClose(false)">
+      Cancel
+    </button>
+  </div>
+</div>
