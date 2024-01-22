@@ -40,7 +40,7 @@ export class AddUserComponent {
       // console.log(this.domainutil.GetDomain()+this.data.profile_pic_path)
       // console.log("http://localhost:7001"+this.data.profile_pic_path);
       if(this.data.profile_pic_path)
-      this.avatarURL = environment.imageBaseUrl+this.data.profile_pic_path;
+      this.avatarURL = this.data.profile_pic_path;
     }
   }
 
