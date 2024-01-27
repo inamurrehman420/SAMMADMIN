@@ -57,7 +57,7 @@
                   </p>
                 </div>
                 <div class="">
-                  <button type="button"  (click)="changeStatus(row.recipe_id)" class="btn-primary btn text-end mr-3" [routerLink]="['/recipeManagement/add-recipe/',row.recipe_id]"  mat-raised-button>
+                  <button type="button"  (click)="onApprove(row.recipe_id)" class="btn-primary btn text-end mr-3" [routerLink]="['/recipeManagement/add-recipe/',row.recipe_id]"  mat-raised-button>
                     <mat-icon style="line-height: 23px;">create</mat-icon>
     
                   </button>

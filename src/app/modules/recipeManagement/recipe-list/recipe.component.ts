@@ -86,7 +86,7 @@ export class RecipeComponent {
   //   this.dataSource.sort = this.sort;
   // }
 
-  changeStatus(id){
+  onApprove(id){
     this.loaderService.isLoading = true;
     this.recipeService.ChangeRecipeStatus({recipe_id:id,recipe_status:"Approved",recipe_remarks:""})
     .pipe(
@@ -100,6 +100,7 @@ export class RecipeComponent {
         }
     });    
   }
+
   onReject(data){
     const dialogRef = this.dialog.open(RejectRecipeComponent, {
       width: "70%",
@@ -109,7 +110,18 @@ export class RecipeComponent {
 
     dialogRef.afterClosed().subscribe((data) => { 
       if (data === true) {
-        // this.GetUser();
+        this.loaderService.isLoading = true;
+        this.recipeService.ChangeRecipeStatus({recipe_id:data.id,recipe_status:"Rejected",recipe_remarks:data.recipe_remarks})
+        .pipe(
+            finalize(() => {
+              this.loaderService.isLoading = false;
+            })
+        )
+        .subscribe((res) => {
+            if (res.success === true) {
+              this.toastr.success("User Added Successfully", "Success");
+            }
+        });    
       }
     });
   }
