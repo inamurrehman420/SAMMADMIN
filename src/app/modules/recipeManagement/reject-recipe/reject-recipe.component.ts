@@ -36,21 +36,18 @@ export class RejectRecipeComponent implements OnInit {
   }
   onSubmit() {
     this.loaderService.isLoading = true;
-    this.recipeService
-      .ChangeRecipeStatus(this.usersForm.value)
-      .pipe(
+    this.recipeService.ChangeRecipeStatus(this.usersForm.value)
+    .pipe(
         finalize(() => {
           this.loaderService.isLoading = false;
         })
-      )
-      .subscribe((res: any) => {
-        if (res.success) {
-          this.dialogRef.close(true);
-          this.toastr.success(res.message, "Success");
-        } else {
-          this.toastr.error(res.message, "Error");
+    )
+    .subscribe((res) => {
+        if (res.success === true) {
+          this.dialogRef.close();
+          this.toastr.success("Rejected Successfully", "Success");
         }
-      });
+    }); 
   }
   onClose(val) {
     this.dialogRef.close(val);

@@ -110,18 +110,7 @@ export class RecipeComponent {
 
     dialogRef.afterClosed().subscribe((data) => { 
       if (data === true) {
-        this.loaderService.isLoading = true;
-        this.recipeService.ChangeRecipeStatus({recipe_id:data.id,recipe_status:"Rejected",recipe_remarks:data.recipe_remarks})
-        .pipe(
-            finalize(() => {
-              this.loaderService.isLoading = false;
-            })
-        )
-        .subscribe((res) => {
-            if (res.success === true) {
-              this.toastr.success("User Added Successfully", "Success");
-            }
-        });    
+         
       }
     });
   }
