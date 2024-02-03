@@ -30,8 +30,7 @@ export class RejectRecipeComponent implements OnInit {
   userForm() {
     this.usersForm = this._formBuilder.group({
       recipe_id: [],
-      recipe_remarks: ["", [Validators.required]],
-      recipe_status: ["Rejected", [Validators.required]],
+      total_price: ["", [Validators.required]],
     });
   }
   onSubmit() {
@@ -51,5 +50,15 @@ export class RejectRecipeComponent implements OnInit {
   }
   onClose(val) {
     this.dialogRef.close(val);
+  }
+
+
+   getTotalPrice(price=null){
+    if(price){
+      const percentageToAdd = 0.05 * parseFloat(price);
+     return price + percentageToAdd;
+    }
+    const percentageToAdd = 0.05 * parseFloat(this.usersForm.get('total_price').value);
+    return this.usersForm.get('total_price').value + percentageToAdd;
   }
 }
