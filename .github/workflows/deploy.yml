@@ -1,0 +1,40 @@
+name: Deploy Angular Frontend
+
+on:
+  push:
+    branches:
+      - master  # Runs only when code is pushed to master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: 191.96.159.101
+          port: 65002
+          username: u612971954
+          password: Mealmaker@123
+          script: |
+            export PATH=$PATH:/home/u612971954/.nvm/versions/node/v21.7.0/bin
+
+            # Navigate to Angular frontend project
+            cd /home/u612971954/domains/myvyky.com/SAMMADMIN
+
+            # Pull latest changes
+            git pull origin master
+
+            # Install dependencies & build Angular
+            npm install --force
+            npm run build --prod
+
+            # Deploy the build (adjust for your setup)
+            rm -rf  /home/u612971954/domains/myvyky.com/public_html/admin/*
+            cp -r dist/* /home/u612971954/domains/myvyky.com/public_html/admin/
+
+            echo "Frontend deployment complete!"
