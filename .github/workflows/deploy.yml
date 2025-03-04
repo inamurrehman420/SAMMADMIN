@@ -35,6 +35,6 @@ jobs:
 
             # Deploy the build (adjust for your setup)
             rm -rf  /home/u612971954/domains/myvyky.com/public_html/admin/*
-            cp -r dist/* /home/u612971954/domains/myvyky.com/public_html/admin/
+            cp -r dist/admin/* /home/u612971954/domains/myvyky.com/public_html/admin/
 
             echo "Frontend deployment complete!"
